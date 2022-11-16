@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import UiContainer from '@/components/ui/UiContainer.vue'
+</script>
+
 <template>
   <div class="layout">
     <div class="layout__header">
@@ -5,7 +9,9 @@
     </div>
 
     <main class="layout__main">
-      <slot name="main" />
+      <ui-container>
+        <slot name="main" />
+      </ui-container>
     </main>
 
     <div class="layout__footer">
@@ -25,5 +31,6 @@
     flex-shrink: 0
 
   &__main
+    padding: 20px 0
     flex-grow: 1
 </style>
