@@ -37,17 +37,19 @@ const {
       </the-header>
     </template>
     <template #main>
-      <app-dialog
-        v-for="dialog in activeDialogs"
-        :key="dialog.id"
-        :coords="dialog.coords"
-        :title="dialog.id"
-        :focused="dialog.focused"
-        @collapse="collapse(dialog.id)"
-        @close="close(dialog.id)"
-        @click="focus(dialog.id)"
-        @move="move(dialog.id, $event)"
-      />
+      <transition-group name="fade" mode="in-out">
+        <app-dialog
+          v-for="dialog in activeDialogs"
+          :key="dialog.id"
+          :coords="dialog.coords"
+          :title="dialog.id"
+          :focused="dialog.focused"
+          @collapse="collapse(dialog.id)"
+          @close="close(dialog.id)"
+          @click="focus(dialog.id)"
+          @move="move(dialog.id, $event)"
+        />
+      </transition-group>
     </template>
     <template #footer>
       <the-footer>

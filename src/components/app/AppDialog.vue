@@ -61,7 +61,7 @@ const classes = computed(() => ({
           icon="minimize"
           size="30px"
           square
-          @click="emit('collapse')"
+          @click.stop="emit('collapse')"
         />
         <ui-button
           aria-label="close window"
@@ -69,7 +69,7 @@ const classes = computed(() => ({
           size="30px"
           color="danger"
           square
-          @click="emit('close')"
+          @click.stop="emit('close')"
         />
       </div>
     </div>
