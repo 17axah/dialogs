@@ -1,1 +1,0 @@
-import{_ as e,o,c as t,a as c}from"./index.f96e9486.js";const s={},n={focusable:"false","aria-hidden":"true",viewBox:"0 0 24 24",width:"24",height:"24"},a=c("path",{d:"M6 19h12v2H6z",fill:"currentColor"},null,-1),r=[a];function i(_,d){return o(),t("svg",n,r)}const h=e(s,[["render",i]]);export{h as default};
