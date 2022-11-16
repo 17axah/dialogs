@@ -49,13 +49,15 @@ function collapseComposition(id: number) {
 }
 
 export const useDialogs = () => {
+  let counter = 0
+
   const dialogs = ref<Dialog[]>([])
 
   const activeDialogs = computed(() => dialogs.value.filter((dialog) => dialog.expanded))
 
   function open() {
     const dialog = {
-      id: dialogs.value.length + 1,
+      id: ++counter,
       focused: true,
       expanded: true,
       coords: { x: 0, y: 0 },
